@@ -1,0 +1,273 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: content-box;
+
+}
+
+
+body {
+    background-color: rgb(230, 228, 228);
+}
+
+img { 
+    max-width: 100%;
+}
+
+
+header {
+    display: flex;
+    background: #1C5A31;
+    background: -moz-linear-gradient(left, #1C5A31 0%, #288146 50%, #1C5A31 100%);
+    background: -webkit-linear-gradient(left, #1C5A31 0%, #288146 50%, #1C5A31 100%);
+    background: linear-gradient(to right, #1C5A31 0%, #288146 50%, #1C5A31 100%);
+    padding-top: 10px;
+    margin: 0 auto;
+    justify-content: center;
+    color: #ffffff
+
+}
+
+header a{
+    text-align: center;
+    color: white;
+}
+
+
+@media (max-width:926px){
+    header h1 {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    nav a {
+        font-size: 18px;
+    }
+}
+
+
+
+.div-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div-logo img {
+    max-width: 50px;
+    margin-left: 40px;
+    margin: 0 auto;
+}
+
+
+nav {
+    background-color: #1c5a31;      
+    padding-bottom: 15px;
+    padding-top: 12px;
+    margin: 0 auto;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-li {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+nav a{
+    padding: 10px;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color: #1c5a31;
+}
+
+
+
+nav a:hover{
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #00000080;
+    border: 2px solid black;
+}
+
+
+
+@media (max-width:926px){
+    nav a{
+        font-size: 13px;
+    }
+}
+
+.space {
+    padding: 10px;
+}
+#map {
+    width: 1300px;
+    height: 450px;
+    border-radius: 20PX;
+    z-index: 1;
+}
+
+@media (max-width:926px){
+    #map {
+        width: 370px;
+        height: 450px;
+        border-radius: 20PX;
+        z-index: 1;
+    }
+}
+
+
+.maps {
+    width: 1300px;
+    height: 450px;
+    margin: 0 auto;
+    border: 5px solid black;
+    border-radius: 25px;
+
+}
+
+
+@media (max-width:926px){
+    .maps{
+        width: 370px;
+    }
+}
+
+
+.spaceInfo {
+    padding-top: 4px;
+}
+
+.info-geral {
+    border-radius: 25px;
+    width: 1300px;
+    height: 110px;
+    margin: 0 auto;
+    background-color: rgb(96, 96, 135);
+
+}
+
+.alerta {
+  position: absolute;
+  top: 580px;
+  z-index: 3;
+}
+
+
+.alerta img {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.574);
+  backdrop-filter: blur( 13.5px );
+  -webkit-backdrop-filter: blur( 13.5px );  
+}
+
+
+.infos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+
+
+@media (max-width:926px){
+    .cards {
+        flex-direction: column;
+    }
+}
+  
+  .cards .red {
+    background-color: #1c5a31;
+  }
+  
+  .cards .blue {
+    background-color: #1c5a31;
+    gap: 8px;
+  }
+  
+  .cards .green {
+    background-color: #1c5a31;
+  }
+  
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  .cards .card p.second-text {
+    font-size: .7em;
+  }
+  
+  .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+
+
+.spaceFim {
+    padding-top: 200px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.699);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.srm{
+    max-width: 100px;
+}
+
+.expo {
+    max-width: 200px;
+}
+
+.sebrae {
+    max-width: 100px;
+}
+
+@media (max-width:926px){
+    .srm{
+        max-width: 70px;
+    }
+    .expo{
+        max-width: 150px;
+    }
+    .sebrae{
+        max-width: 70px;
+    }
+}

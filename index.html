@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agroinnovate</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/leaflet.css">
+    <script src="/leaflet.js"></script>
+</head>
+<body>
+
+    <header id="header">
+        
+        <div class="div-logo">
+            <a href="/index.html"><img src="/img/fim.svg" alt="logo"></a>
+            <h1><a href="/index.html">Agroinnovate</a></h1>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul class="nav-ul">
+            <li class="nav-li"><a href="/historico/index.html">Historico</a></li>
+            <li class="nav-li"><a href="/servicos/index.html">Serviços/Produtos</a></li>
+            <li class="nav-li"><a href="/saiba mais/index.html">Saiba mais</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <section class="space">
+            
+        </section>
+
+        <section class="maps">
+
+            <div id="map">
+
+            </div>
+
+            <div class="alerta">
+                <a href="">              
+                    <img src="/img/red alert.svg" alt="">
+                </a>
+            </div>
+           
+        </section>
+
+        <section class="space"></section>
+
+        <section class="infos">
+
+            <div class="cards">
+                <div class="card red">
+                    <p class="tip"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M491-200q12-1 20.5-9.5T520-230q0-14-9-22.5t-23-7.5q-41 3-87-22.5T343-375q-2-11-10.5-18t-19.5-7q-14 0-23 10.5t-6 24.5q17 91 80 130t127 35ZM480-80q-137 0-228.5-94T160-408q0-100 79.5-217.5T480-880q161 137 240.5 254.5T800-408q0 140-91.5 234T480-80Zm0-80q104 0 172-70.5T720-408q0-73-60.5-165T480-774Q361-665 300.5-573T240-408q0 107 68 177.5T480-160Zm0-320Z"/></svg>Agua gasta: 500.000L</p>
+                    <p class="tip">Agua gasta por m²: 800L</p>
+<!--                     <p class="second-text">Lorem Ipsum</p>
+ -->                </div>
+
+                <div class="card blue">
+                    <p class="tip"> ⚠ Atenção</p>
+                    <p class="second-text">Local: B51-01</p>
+                    <p class="second-text">Está com baixo nivel de umidade, requer atenção!</p>
+                    <p class="second-text">Local: B51-02</p>
+                    <p class="second-text">Está com baixo nivel de umidade, requer atenção!</p>
+                    <p class="second-text">Local: B51-03</p>
+                    <p class="second-text">Está com baixo nivel de umidade, requer atenção!</p>
+
+                </div>
+                <div class="card green">
+                    <p class="tip">Area total: 157ha</p>
+                    <p class="tip">Area total irrigada:87ha</p>
+                    <p class="tip">Estagio do plantio:Proximo a colheita</p>
+                  
+
+<!--                     <p class="second-text">Lorem Ipsum</p>
+ -->                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <section class="spaceFim"></section>
+
+
+    <footer>
+        <img src="/img/srm.png" alt="srm" class="srm">
+        <img src="/img/Logo-Expoinga-2024.png" alt="expo" class="expo">
+        <img src="/img/logo sebrae.png" alt="sebrae" class="sebrae">
+        <p>© HackaThon Inova Agro 2024</p>
+    </footer>
+
+    <script>
+    var map = L.map('map').setView([-24.030317, -52.009546],12);   
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var circle = L.circle([-24.045175, -51.999836], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+    }).addTo(map);
+    circle.bindPopup("Região:B51 requer atenção");
+
+    var circle1 = L.circle([-24.064891, -52.005157], {
+    color: 'blue',
+    fillColor: 'blue',
+    fillOpacity: 0.5,
+    radius: 500
+    }).addTo(map);
+    circle1.bindPopup("Região:B52 ESTÁ OK");
+
+    var circle2 = L.circle([-24.060511, -51.994686], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+    }).addTo(map);
+    circle2.bindPopup("Região:B51 requer atenção");
+
+    var circle3 = L.circle([-24.068653, -52.012625], {
+    color: 'blue',
+    fillColor: 'blue',
+    fillOpacity: 0.5,
+    radius: 500
+    }).addTo(map);
+    circle3.bindPopup("Região:B52 ESTÁ OK");
+
+
+
+
+
+
+
+/*      var popup = L.popup();
+
+    function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+    }
+
+    map.on('click', onMapClick);  */
+    </script>
+</body>
+</html>

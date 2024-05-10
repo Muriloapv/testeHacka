@@ -1,0 +1,487 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: content-box;
+    list-style-type: none;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    background-color: rgb(230, 228, 228);
+}
+
+img { 
+    max-width: 100%;
+}
+
+
+header {
+    display: flex;
+    background: #1C5A31;
+    background: -moz-linear-gradient(left, #1C5A31 0%, #288146 50%, #1C5A31 100%);
+    background: -webkit-linear-gradient(left, #1C5A31 0%, #288146 50%, #1C5A31 100%);
+    background: linear-gradient(to right, #1C5A31 0%, #288146 50%, #1C5A31 100%);
+    padding-top: 10px;
+    margin: 0 auto;
+    justify-content: center;
+    color: #ffffff
+
+}
+
+header a{
+  text-align: center;
+  color: white;
+}
+
+
+@media (max-width:926px){
+    header h1 {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    nav a {
+        font-size: 18px;
+    }
+}
+
+
+
+.div-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div-logo img {
+    max-width: 50px;
+    margin-left: 40px;
+    margin: 0 auto;
+}
+
+
+nav {
+    background-color: #1c5a31;      
+    padding-bottom: 15px;
+    padding-top: 12px;
+    margin: 0 auto;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-li {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+nav a{
+    padding: 10px;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color: #1c5a31;
+}
+
+
+
+nav a:hover{
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #00000080;
+    border: 2px solid black;
+}
+
+@media (max-width:926px){
+  nav a{
+      font-size: 13px;
+  }
+}
+
+/* ----------------------------- */
+
+.space {
+    padding-top: 30px;
+}
+
+.container-irrigacao {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+@media (max-width:926px){
+  .container-irrigacao {
+    width: 830px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(170, 170, 170);
+  }
+  .month h3 {
+    padding-top: 18px;
+    font-size: 20px;
+  }
+}
+.calendario {
+    width: 600px;
+    height: 400px;
+}
+
+@media (max-width:926px){
+  .calendario {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+}
+  .weekdays {
+    display: flex;
+  }
+ 
+
+}
+.month {
+  border-radius: 10px;
+  padding: 70px 25px;
+  width: 100%;
+  background: #1c5a31;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #ffffff;
+  margin: 0;
+
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #222222;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1c5a31;
+  color: white !important
+}
+
+
+.desc-calendario{
+    width: 600px;
+    height: 400px;
+    background-color: rgb(108, 108, 108);
+    border-radius: 10px;
+}
+
+@media (max-width:926px){
+  .desc-calendario{
+    border-radius: 10px;
+    width: 350px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    color: black;
+    background-color: #ddd;
+  }
+}
+
+.infos-produtor{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.diasMolhados{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    padding-top: 10px;
+}
+
+.diasMolhados .info1 {
+    display: flex;
+    padding-top: 10px;
+} 
+
+.info1 p {
+    margin-left: 20px;
+}
+
+
+.diasMolhados input {
+    width: 110px;
+}
+
+
+.diasMolhados h4{
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* ----------------------------------------------------- */
+
+.container-chuva {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+
+@media (max-width:926px){
+  .container-chuva {
+    width: 800px;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(170, 170, 170);
+    
+}}
+
+.calendario-chuva {
+    width: 580px;
+    height: 400px;
+}
+@media (max-width:926px){
+  .calendario-chuva {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    
+}}
+
+.month {
+  border-radius: 10px;
+  padding: 70px 25px;
+  width: 100%;
+  background: #1c5a31;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom:10px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ffffff;
+
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #000000;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #ffffff;
+  margin: 0;
+
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1c5a31;
+  color: white !important
+}
+
+
+
+
+
+.desc-calendario-chuva{
+    width: 580px;
+    height: 400px;
+    background-color: rgb(108, 108, 108);
+    border-radius: 10px;
+}
+
+@media (max-width:926px){
+  .desc-calendario-chuva{
+    border-radius: 10px;
+    width: 350px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    color: black;
+    background-color: #ddd;
+}}
+
+.infos-produtor{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.diasMolhados{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.diasMolhados h4 {
+    text-align: center;
+}
+
+.diasMolhados .info-chuva {
+    display: flex;
+    padding-top: 10px;
+} 
+
+.info-chuva p {
+    margin-left: 20px;
+}
+
+
+.diasMolhados input {
+    width: 110px;
+}
+
+@media (max-width:926px){
+
+}
+
+.diasMolhados h4{
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.total{
+    padding-top:100px;
+    text-align: center;
+}
+
+.iri-total{
+    padding-top:50px;
+    text-align: center;
+}
+
+
+
+
+
+.space-footer{
+    padding-top: 150px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.699);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.srm{
+    max-width: 100px;
+}
+
+.expo {
+    max-width: 200px;
+}
+
+.sebrae {
+    max-width: 100px;
+}
+
+@media (max-width:926px){
+    .srm{
+        max-width: 70px;
+    }
+    .expo{
+        max-width: 150px;
+    }
+    .sebrae{
+        max-width: 70px;
+    }
+}
